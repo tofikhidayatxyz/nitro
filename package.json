@@ -1,10 +1,10 @@
 {
   "name": "Nitro",
   "version": "1.0.0",
-  "description": "A plugin to speed up coding",
-  "main": "nitro.js",
+  "description": "A plugin to speed up frontend coding",
+  "main": "./nitro",
   "bin": {
-    "nitro": "./nitro.js"
+    "nitro": "./nitro"
   },
   "repository": "https://github.com/tofikhidayat/nitro.git",
   "author": "Tofik Hidayat",

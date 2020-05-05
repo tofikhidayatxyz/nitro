@@ -9,7 +9,7 @@ import server from './server'
 export const start = args => {
     env.config()
     
-    if(args._[0] == 'serve') {
+    if(args._.indexOf('serve') >= 0 ) {
         server()   
     }
     
