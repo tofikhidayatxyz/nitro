@@ -35,7 +35,6 @@ const routerDefault = (app, action) => {
 
     const route = path => {
         props.route = path
-
         return {
             render: render, 
             response: response

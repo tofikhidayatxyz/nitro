@@ -1,0 +1,11 @@
+[
+    {
+        "name" : "Facebook",
+        "icon" : "http://d33wubrfki0l68.cloudfront.net/b1d5696904b2d6672f1943e1d41f401483886a36/ad602/assets/images/icons/facebook.svg",
+        "url" : "https://facebook.com"
+    }, {
+        "name" : "Twitter",
+        "icon" : "http://d33wubrfki0l68.cloudfront.net/ccc6ebf328bb89470b57f850de16943489f1e7ee/4a7b5/assets/images/icons/twitter.svg",
+        "url" : "https://facebook.com"
+    }
+]

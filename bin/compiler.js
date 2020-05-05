@@ -1,10 +1,31 @@
 'use strict'
+import edge from './engine/edge'
+import config from '../nitros/config'
 
-const compile = async (file) => {
-    return "Before compile"
+/**
+ * Load a file and validate them
+ * @param {*} file 
+ */
+
+const readFile = async file => {
+
+}
+
+/**
+ * Compile by engine 
+ * @param {*} file 
+ */
+const compile = (file, params={}) => { 
+    switch(config.engine) {
+        case 'edge':
+            return edge.compile(file, params)
+        default:
+            return edge.compile(file, params)
+            
+    }
 }
 
 
-module.exports =  {
+export {
     compile
 }
