@@ -17,8 +17,12 @@
   "title": "Blog Plugin",
   "readingTime": 0.145,
   "truncated": true,
-  "nextItem": {
+  "prevItem": {
     "title": "A large blog post",
     "permalink": "/blog/2020/04/14/large-blog-post"
+  },
+  "nextItem": {
+    "title": "Welcome",
+    "permalink": "/blog/welcome"
   }
 }
