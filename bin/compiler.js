@@ -1,31 +1,43 @@
 'use strict'
 import edge from './engine/edge'
+import ejs from './engine/ejs'
 import config from '../nitros/config'
+import helper from '../nitros/helper'
 
 /**
- * Load a file and validate them
- * @param {*} file 
+ * Helper autoloader
+ * @param {*} any
  */
 
-const readFile = async file => {
-
-}
+ const autoloader = () => {
+    switch(config.view.engine) {
+        case 'edge':
+            for (const key in helper) {
+                edge.helper(key, helper[key])
+            }
+        default:
+            return new Error('Invalid template Engine')  
+    }
+     
+ }
 
 /**
  * Compile by engine 
  * @param {*} file 
  */
 const compile = (file, params={}) => { 
-    switch(config.engine) {
+    switch(config.view.engine) {
         case 'edge':
             return edge.compile(file, params)
+        case 'ejs': 
+            return ejs.compile(file, params)
         default:
-            return edge.compile(file, params)
-            
+            return new Error('Invalid template Engine')
     }
 }
 
 
 export {
-    compile
+    compile,
+    autoloader
 }

@@ -1,7 +1,7 @@
 'use strict'
 import env from 'dotenv'
 import server from './server'
-import {compile} from './compiler'
+import {compile, autoloader as compilerLoader} from './compiler'
 
 /**
  * Main command
@@ -9,13 +9,16 @@ import {compile} from './compiler'
  * @return void 
  */
  const test = async ()=> {
-    const view  = await compile('pages/index.edge')
+    const view  = await compile('pages/index')
     console.log(view)
  }
 
 
 export const start = args => {
+    // load env
     env.config()
+    // reset compile loader event
+    compilerLoader()
     
     if(args._.indexOf('serve') >= 0 ) {
         server()   

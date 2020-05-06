@@ -14,6 +14,17 @@ module.exports = route => {
     // route('/prov').response(({req, res, next, render}) => {
     //     res.send('async')
     // });
+    /**
+     * Route('/blog/')
+     * .collection('posts')
+     * .selector('name') // fileName title dll  
+     * .filter(function(itm){
+     *      return itm > 0
+     * })
+     * .render('blog')
+     * .detail('blog-detail')
+     * .exec()
+     */
 
 }
 
