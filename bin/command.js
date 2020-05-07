@@ -1,7 +1,8 @@
 'use strict'
 import env from 'dotenv'
 import server from './server'
-import {compile, autoloader as compilerLoader} from './compiler'
+import {autoloader as compilerLoader} from './compiler'
+import collection from './loader/collection'
 
 /**
  * Main command
@@ -9,7 +10,8 @@ import {compile, autoloader as compilerLoader} from './compiler'
  * @return void 
  */
  const test = async ()=> {
-    const view  = await compile('pages/index')
+     // name, encription
+    const view  = await collection('post', 'md5')
     console.log(view)
  }
 

@@ -17,7 +17,7 @@ const compile = async (file, params = {}) => {
                 try {
                     let compiled = result;
                     compiled = replaceFile(compiled, replacer.beforeCompile)
-                    compiled = edge.renderString(result, params)
+                    compiled = edge.renderString(compiled, params)
                     compiled = replaceFile(compiled, replacer.afterCompile)
                     return resolve(compiled)
                 } catch(e) {

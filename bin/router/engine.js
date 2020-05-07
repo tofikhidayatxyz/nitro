@@ -2,6 +2,7 @@
 import router from '../../nitros/router'
 import chalk from 'chalk'
 import {compile} from '../compiler'
+import collection from './collection'
 
 /**
  * Handle router default
@@ -12,8 +13,17 @@ const routerDefault = (app, action) => {
     
     const props = {
         route: null,
+        render: null,
+        response: null
     }   
 
+    // handle execution route
+     
+    const exec = () => {
+        
+    }
+
+    // handle default response
     const response = mainResponse => {
         return app.get(props.route, async (req, res, next) => {
             return await mainResponse({
@@ -24,7 +34,8 @@ const routerDefault = (app, action) => {
             })
         })
     }
-
+    
+    // handle response when render file
     const render = (file, args) => {
         return app.get(props.route, async (req, res) => {
             const compiled = await compile(file, args)
@@ -37,7 +48,8 @@ const routerDefault = (app, action) => {
         props.route = path
         return {
             render: render, 
-            response: response
+            response: response,
+            collection: collection
         }
     }
     return action(route);

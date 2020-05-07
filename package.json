@@ -24,6 +24,7 @@
     "figlet": "^1.4.0",
     "http-errors": "^1.7.3",
     "morgan": "^1.10.0",
+    "yaml-front-matter": "^4.1.0",
     "yargs": "^15.3.2-beta.0"
   },
   "devDependencies": {}

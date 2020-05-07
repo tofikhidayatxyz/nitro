@@ -2,18 +2,19 @@
 
 module.exports = route => {
 
-    route('/hefo').render('index', {
-        name: 'hef'
-    })
+    // route('/hefo').render('pages/index', {
+    //     name: 'hef'
+    // })
 
-    route('/example').response(({req, res, next, render}) => {
-        res.send('async')
-        res.end()
-    });
+    // route('/example').response(({req, res, next, render}) => {
+    //     res.send('async')
+    //     res.end()
+    // });
 
     // route('/prov').response(({req, res, next, render}) => {
     //     res.send('async')
     // });
+    route('/').collection('post')
     /**
      * Route('/blog/')
      * .collection('posts')
@@ -22,7 +23,7 @@ module.exports = route => {
      *      return itm > 0
      * })
      * .render('blog')
-     * .detail('blog-detail')
+     * .view('blog-detail')
      * .exec()
      */
 

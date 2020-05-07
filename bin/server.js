@@ -10,7 +10,7 @@ import bodyParser from 'body-parser'
 import compression from 'compression'
 import chalk from 'chalk'
 import {normalizePort} from './util/http'
-import routerEngine from './util/routerEngine'
+import routerEngine from './router/engine'
 
 /**
  * Main server

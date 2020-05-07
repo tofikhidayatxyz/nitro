@@ -4,14 +4,14 @@ const replacers = {
     beforeCompile: [
         {
             key: 'hei',
-            value: 'hello'
+            replace: 'hello'
         }
     ],
     
     afterCompile: [
         {
             key: 'alpha',
-            value: 'v1'
+            replace: 'v1'
         }
     ]
 }
